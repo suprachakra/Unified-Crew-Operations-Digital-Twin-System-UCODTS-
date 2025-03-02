@@ -80,6 +80,11 @@ erDiagram
     FLIGHT ||--o{ SAFETY : "generates"
     FLIGHT ||--o{ DISRUPTION : "affected by"
 ```
+### Schema Documentation
+- **Tables and Fields:**
+  - Detailed descriptions of each table including primary and foreign keys, data types, and indexing strategies are documented separately in our database schema files. However, its high-level design there can be many more tables and mappings
+- **ML Model Specifics:**
+  - Data requirements for training models (e.g., crew fatigue prediction, predictive maintenance) are documented, including necessary features, normalization processes, and expected data formats.
 
 ### Analytics Integration
 - **Data Pipeline Integration:**  
