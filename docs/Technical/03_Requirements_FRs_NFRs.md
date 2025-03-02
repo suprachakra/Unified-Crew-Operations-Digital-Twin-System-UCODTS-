@@ -1,0 +1,25 @@
+## Requirements: Functional and Non-Functional
+
+This document provides a comprehensive breakdown of all functional (FR) and non-functional (NFR) requirements for UCODTS. Each requirement is accompanied by clear acceptance criteria, identified risks with fallback strategies, departmental validation, and priority levels.
+
+### Functional Requirements (FRs)
+| **FR ID** | **Requirement Description**                                                        | **Acceptance Criteria**                                                                                                 | **Risks & Mitigation**                                                               | **Department Checks**          | **Priority** |
+|-----------|------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|--------------------------------|--------------|
+| FR-001    | Optimize crew scheduling using AI-driven analysis to provide automated recommendations and fatigue risk scores. | - **Inputs:** Historical crew data and real-time operational metrics.<br>- **Outputs:** Automated scheduling recommendations with fatigue risk scores and alerts. | **Risk:** Inaccurate predictions.<br>**Mitigation:** Implement manual override options and dual verification processes. | Operations, Safety             | High         |
+| FR-002    | Track flights in real time and provide automated alerts and re-routing suggestions during disruptions.             | - **Integration:** External flight data APIs.<br>- **Performance:** Real-time dashboard updates and alerts within 5 minutes of disruption. | **Risk:** Data latency or incomplete feeds.<br>**Mitigation:** Use caching strategies and redundant data sources.         | Flight Operations              | High         |
+| FR-003    | Forecast maintenance needs and log safety incidents in real time to support proactive interventions.                | - **Alert Timing:** Predictive alerts must trigger at least 48 hours before a failure.<br>- **Logging:** Incident logs must capture complete details (timestamp, severity, resolution). | **Risk:** False alerts causing unnecessary interventions.<br>**Mitigation:** Utilize dual verification and threshold adjustments. | Engineering, Maintenance       | High         |
+| FR-004    | Monitor external disruptions (e.g., weather, geopolitical events) and automatically generate alternative flight routes.  | - **Response Time:** Automated re-routing suggestions within 5 minutes of detecting a disruption.<br>- **Integration:** Seamless processing of external data sources. | **Risk:** Incomplete or delayed external data.<br>**Mitigation:** Provide manual override options and escalation protocols. | Flight Ops, Safety             | High         |
+
+### Non-Functional Requirements (NFRs)
+
+| **NFR ID** | **Requirement**                                                   | **Metric/Target**                           | **Risks & Fallback**                                                                    | **Priority** |
+|------------|-------------------------------------------------------------------|---------------------------------------------|-----------------------------------------------------------------------------------------|--------------|
+| NFR-001    | The system must process at least 10,000 events per second.        | ≥10,000 events/sec; average latency <200ms    | **Risk:** Overload during peak times.<br>**Fallback:** Auto-scaling and load balancing via Kubernetes. | High         |
+| NFR-002    | The system must support horizontal scaling with zero downtime.    | 99.9% uptime; seamless node integration     | **Risk:** Bottlenecks during scaling.<br>**Fallback:** Continuous stress testing and dynamic resource allocation.   | High         |
+| NFR-003    | Data must be encrypted in transit (TLS) and at rest (AES-256).      | Zero critical vulnerabilities; 100% audit pass | **Risk:** Unauthorized data access.<br>**Fallback:** Multi-factor authentication and regular security audits.        | Critical     |
+| NFR-004    | The user interface must be intuitive, responsive, and accessible.   | User satisfaction score ≥85%; WCAG 2.1 AA compliance | **Risk:** Poor usability.<br>**Fallback:** Iterative design improvements based on continuous user feedback.           | High         |
+| NFR-005    | The system must meet all applicable aviation regulatory requirements. | 100% compliance in external audits            | **Risk:** Regulatory non-compliance.<br>**Fallback:** Continuous monitoring and rapid system updates on regulation changes. | Critical     |
+
+
+### Summary
+This document defines all functional and non-functional requirements for UCODTS with clear acceptance criteria, detailed risk mitigations, and validation checkpoints. Each requirement is designed to ensure that the solution is robust, secure, scalable, and meets all strategic objectives.
