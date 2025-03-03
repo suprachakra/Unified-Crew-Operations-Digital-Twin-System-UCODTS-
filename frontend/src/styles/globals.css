@@ -1,0 +1,23 @@
+/* TailwindCSS base styles if using Tailwind */
+/* If not using Tailwind, these are basic styles */
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #f9fafb;
+  color: #1f2937;
+}
+
+/* Example utility classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Responsive design examples */
+@media (max-width: 768px) {
+  .container {
+    padding: 0.5rem;
+  }
+}
