@@ -13,3 +13,23 @@ This is the frontend application for the Unified Crew & Operations Digital Twin 
 1. Install dependencies:
    ```bash
    npm install
+   ```
+2. Run the development server:
+   ```bash
+   npm run dev
+   ```
+3. Build for production:
+   ```bash
+   npm run build
+   npm start
+   ```
+
+### Configuration
+```env
+### Environment configuration for UCODTS Frontend
+
+### Base URL for backend API
+API_BASE_URL=http://localhost:8000
+
+### Any additional configuration variables can be added here.
+```
