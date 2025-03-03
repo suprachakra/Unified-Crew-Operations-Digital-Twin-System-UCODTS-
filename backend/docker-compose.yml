@@ -1,0 +1,54 @@
+version: '3.8'
+services:
+  auth:
+    build: ./services/auth
+    ports:
+      - "8001:8000"
+    depends_on:
+      - database
+  crew:
+    build: ./services/crew
+    ports:
+      - "8002:8000"
+    depends_on:
+      - database
+  flight:
+    build: ./services/flight
+    ports:
+      - "8003:8000"
+    depends_on:
+      - database
+  maintenance:
+    build: ./services/maintenance
+    ports:
+      - "8004:8000"
+    depends_on:
+      - database
+  safety:
+    build: ./services/safety
+    ports:
+      - "8005:8000"
+    depends_on:
+      - database
+  disruption:
+    build: ./services/disruption
+    ports:
+      - "8006:8000"
+    depends_on:
+      - database
+  database:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: ucodts
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: ucodts_db
+    ports:
+      - "5432:5432"
+  kafka:
+    build: ./message_queue
+    ports:
+      - "9092:9092"
+  zookeeper:
+    image: confluentinc/cp-zookeeper:latest
+    ports:
+      - "2181:2181"
