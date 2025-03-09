@@ -1,4 +1,4 @@
-  flight_id,flight_number,departure,arrival,scheduled_departure,scheduled_arrival,status
+flight_id,flight_number,departure,arrival,scheduled_departure,scheduled_arrival,status
 1,EK101,DXB,LHR,2023-12-01 09:00:00,2023-12-01 14:00:00,On-Time
 2,EK102,LHR,JFK,2023-12-02 10:00:00,2023-12-02 15:00:00,Delayed
 3,EK103,JFK,CDG,2023-12-03 08:30:00,2023-12-03 13:30:00,On-Time
