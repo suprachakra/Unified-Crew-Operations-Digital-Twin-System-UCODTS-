@@ -2,42 +2,49 @@ version: '3.8'
 services:
   auth:
     build: ./services/auth
+    container_name: ucodts_auth
     ports:
       - "8001:8000"
     depends_on:
       - database
   crew:
     build: ./services/crew
+    container_name: ucodts_crew
     ports:
       - "8002:8000"
     depends_on:
       - database
   flight:
     build: ./services/flight
+    container_name: ucodts_flight
     ports:
       - "8003:8000"
     depends_on:
       - database
   maintenance:
     build: ./services/maintenance
+    container_name: ucodts_maintenance
     ports:
       - "8004:8000"
     depends_on:
       - database
   safety:
     build: ./services/safety
+    container_name: ucodts_safety
     ports:
       - "8005:8000"
     depends_on:
       - database
   disruption:
     build: ./services/disruption
+    container_name: ucodts_disruption
     ports:
       - "8006:8000"
     depends_on:
       - database
   database:
     image: postgres:13
+    container_name: ucodts_db
     environment:
       POSTGRES_USER: ucodts
       POSTGRES_PASSWORD: password
@@ -46,9 +53,14 @@ services:
       - "5432:5432"
   kafka:
     build: ./message_queue
+    container_name: ucodts_kafka
     ports:
       - "9092:9092"
   zookeeper:
     image: confluentinc/cp-zookeeper:latest
+    container_name: ucodts_zookeeper
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
     ports:
       - "2181:2181"
