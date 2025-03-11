@@ -11,3 +11,6 @@ The Flight Service tracks flight status and provides real-time flight informatio
 2. Build the Docker image:
    ```bash
    docker build -t ucodts-flight .
+3. Run the container:
+   ```
+   docker run -p 8003:8000 ucodts-flight
