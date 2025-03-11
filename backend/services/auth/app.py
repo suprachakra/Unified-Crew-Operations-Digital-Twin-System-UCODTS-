@@ -2,17 +2,16 @@
 
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
-import jwt
-import time
+import jwt, time
 from .config import SECRET_KEY, ALGORITHM
 
 app = FastAPI(title="UCODTS Auth Service")
 
-# Dummy user database (for demo purposes)
+# Dummy user store (in production, use a secure database and hashed passwords)
 users_db = {
     "user@example.com": {
         "username": "user@example.com",
-        "password": "securePassword"  # Use hashed passwords in production
+        "password": "securePassword"
     }
 }
 
@@ -29,7 +28,6 @@ async def login(auth_request: AuthRequest):
     if not user or user["password"] != auth_request.password:
         raise HTTPException(status_code=401, detail="Invalid credentials")
     
-    # Create JWT token
     payload = {
         "sub": auth_request.username,
         "iat": int(time.time()),
