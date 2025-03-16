@@ -20,13 +20,20 @@ This document outlines the data integration strategy for UCODTS, ensuring high d
 
 ### Data Model and Schema
 - **ERD Diagrams:**  
-  - Detailed diagrams illustrate relationships among key entities (crew, flight, maintenance, safety, disruption).
+  - **Crew:** Stores crew profiles, schedules, and fatigue scores.
+  - **Flight:** Contains flight details, schedules, statuses, and delay reasons.
+  - **Maintenance:** Records maintenance events, statuses, and descriptions.
+  - **Safety:** Logs safety incidents, including timestamps and resolutions.
+  - **Disruption:** Captures external disruption events and their operational impacts.
 - **Schema Documentation:**  
-  - In-depth descriptions of tables, fields, primary and foreign keys, and indexing strategies.
+  - Detailed descriptions of tables, fields, primary/foreign keys, and indexing strategies are maintained in our database schema files.
+  - ERD diagrams visually represent relationships among key entities.
 - **ML Model Specifics:**  
   - Documentation of data requirements for training models (e.g., crew fatigue prediction, predictive maintenance).
 - **Continuous Improvement:**  
-  - Scheduled retraining pipelines and model performance monitoring are in place to ensure ongoing data integrity and model accuracy.
+  - Scheduled updates and retraining pipelines ensure that our ML models remain accurate over time.
+  - Continuous monitoring of data quality and pipeline performance, with automated alerts to address issues promptly.
+
 
 ```mermaid
 erDiagram
