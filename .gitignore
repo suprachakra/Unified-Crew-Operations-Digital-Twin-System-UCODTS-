@@ -1,0 +1,16 @@
+# Ignore model binary files
+data/models/*.h5
+data/models/*.pkl
+
+# Optionally ignore entire directories if not required in GitHub
+data/models/
+
+# Ignore temporary files and caches
+*.pyc
+__pycache__/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Environment files
+.env
