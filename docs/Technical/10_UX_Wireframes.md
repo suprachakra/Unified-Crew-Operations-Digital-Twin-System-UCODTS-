@@ -1,28 +1,28 @@
-## UX Wireframes
+## UX Wireframes and Design Guidelines
+The UX design strategy and provides a collection of wireframes for the Unified Crew & Operations Digital Twin System (UCODTS). The wireframes are designed to create an intuitive, user-centric interface that supports real-time decision-making and operational management. This document also includes design guidelines, accessibility standards, and interaction flows to ensure a seamless user experience across all platforms.
 
-### Overview
-This document contains detailed design flows, wireframes, mockups, and accessibility guidelines for UCODTS. Our user-centric approach ensures an intuitive, responsive, and accessible interface for all operational users.
+### Design Objectives
+- **User-Centric:** Prioritize intuitive navigation, clear visual hierarchy, and interactive elements that enhance user engagement.
+- **Real-Time Visibility:** Provide dashboards that display live data and key performance indicators (KPIs) to support rapid decision-making.
+- **Accessibility:** Ensure the design complies with WCAG 2.1 AA standards to be accessible to all users.
+- **Scalability:** Design components that are reusable and adaptable to different screen sizes and devices.
+- **Consistency:** Maintain visual and interaction consistency across all modules, ensuring a coherent brand experience.
 
-### User Flow Diagrams
-- **Dashboard Flow:**  
-  Diagram illustrating the end-to-end workflow from login to real-time operational dashboard, covering key interactions (e.g., viewing crew schedules, flight statuses, and maintenance alerts).
-- **Crew Scheduling Flow:**  
-  Diagram detailing the process of reviewing, editing, and approving crew schedules with fatigue indicators.
-- **Incident Reporting Flow:**  
-  Diagram showing the steps for logging and reviewing safety incidents.
+### Wireframe Overview
+The following wireframes guidelines represent the core user interfaces and interaction flows within UCODTS:
+| **Wireframe**                             | **Purpose**                                                                                                       | **Key Components**                                                                                                                                                                                                                                                                                                                                 | **Annotations**                                                                                                  |
+|-------------------------------------------|-------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
+| **Dashboard Wireframe**                   | Provides a high-level view of key operational metrics such as flight status, crew assignments, maintenance alerts, and safety incidents. | - **Header:** Navigation links, user profile, and notifications<br>- **Main Dashboard:** Interactive charts and real-time KPI panels<br>- **Sidebar:** Quick access to modules (Crew, Flight, Maintenance, Safety, Disruption)<br>- **Footer:** Contact information and system status | Emphasize real-time updates and responsiveness. Use clear, concise labels and intuitive icons.                  |
+| **Crew Scheduling Interface**             | Enables crew schedulers to view, assign, and adjust crew schedules with predictive analytics on fatigue.           | - **Crew List:** Detailed view of crew profiles, current fatigue scores, and last scheduled dates<br>- **Assignment Panel:** Interactive form for assigning crew to flights with predictive suggestions<br>- **Analytics Widget:** Visual indicators of crew fatigue trends and recommendations                                      | Prioritize ease-of-use and minimal manual input. Provide clear error messages and validation prompts.             |
+| **Flight Operations View**                | Offers a comprehensive overview of flight schedules, statuses, and delay reasons.                                   | - **Flight List:** Tabular view of flights with real-time status updates<br>- **Detail View:** Expanded view for individual flights showing schedule, assigned crew, and operational metrics<br>- **Rerouting Panel:** Suggestions for alternative routing in case of disruptions                                        | Use color-coded statuses for quick identification. Ensure responsiveness and clarity of flight data.               |
+| **Maintenance & Safety Management Screen**| Allows maintenance engineers and safety officers to monitor, log, and manage maintenance events and safety incidents. | - **Event Log:** List of maintenance events and safety incidents with filtering options<br>- **Detail Panel:** Expanded view with detailed incident or maintenance reports<br>- **Predictive Analytics Section:** Displays model predictions for maintenance needs                                                     | Include visual timelines and severity indicators. Ensure critical events are clearly highlighted and actionable.   |
+| **User Feedback & Change Management Portal** | Captures user feedback and change requests to drive continuous improvement.                                         | - **Feedback Form:** Simple form for submitting feedback with rating and category selection<br>- **Feedback Dashboard:** Visual analytics of feedback trends and resolution status<br>- **Change Request Tracker:** List and status of submitted change requests with impact analysis                                   | Emphasize transparency and easy tracking of feedback. Provide clear instructions and progress indicators.         |
 
-### Wireframes and Mockups
-- **Dashboard Wireframes:**  
-  High-fidelity wireframes for the main dashboard (desktop and mobile).
-- **Detailed Screen Mockups:**  
-  Specific screens for crew management, flight tracking, maintenance predictions, and safety incident logs.
-  
-### Accessibility Guidelines
-- **WCAG 2.1 AA Compliance:**  
-  - Design ensures adequate contrast ratios, clear font sizes, and keyboard navigation.
-  - Detailed test cases for accessibility are included.
-- **Responsive Design:**  
-  - Defined breakpoints for various devices, with annotated design specifications.
+### Design Guidelines
+- **Visual Consistency:** Use a consistent color palette, typography, and iconography aligned with the UCODTS brand.
+- **Accessibility:** Follow WCAG 2.1 AA guidelines, ensuring sufficient color contrast, keyboard navigability, and screen reader compatibility.
+- **Responsive Design:** Design wireframes to be adaptable for desktop, tablet, and mobile views.
+- **Interaction Design:** Provide intuitive user interactions with clear call-to-actions, hover effects, and immediate feedback on user actions.
 
 ### Summary
-This document provides a comprehensive visual guide to UCODTS's user interface. It ensures that the design is intuitive, accessible, and supports the operational needs of diverse user groups.
+The wireframes should ensure that all users—from operations managers to maintenance engineers—can effectively interact with the system. This serves as a blueprint for UI/UX development and ensures that our digital twin platform delivers actionable insights and outstanding usability.
