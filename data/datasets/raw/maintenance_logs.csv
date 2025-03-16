@@ -1,0 +1,51 @@
+maintenance_id,flight_id,equipment,maintenance_date,status,description,cost
+1,101,Engine,2023-11-15,Pending,Engine diagnostic test pending,1500.00
+2,102,Landing Gear,2023-11-16,Completed,Landing gear maintenance performed,800.00
+3,103,Avionics,2023-11-17,Pending,Avionics system check scheduled,1200.00
+4,104,Hydraulics,2023-11-18,Completed,Hydraulic fluid replacement,500.00
+5,105,Engine,2023-11-19,Pending,Engine performance evaluation pending,1600.00
+6,106,Fuel System,2023-11-20,Completed,Fuel system maintenance performed,900.00
+7,107,Landing Gear,2023-11-21,Pending,Check and repair landing gear,850.00
+8,108,Avionics,2023-11-22,Completed,Avionics system update,1100.00
+9,109,Engine,2023-11-23,Pending,Engine diagnostics in progress,1550.00
+10,110,Hydraulics,2023-11-24,Completed,Hydraulic system maintenance completed,600.00
+11,111,Engine,2023-11-25,Pending,Engine check required,1500.00
+12,112,Landing Gear,2023-11-26,Completed,Landing gear inspection complete,800.00
+13,113,Avionics,2023-11-27,Pending,Avionics calibration scheduled,1200.00
+14,114,Hydraulics,2023-11-28,Completed,Hydraulic fluid change done,500.00
+15,115,Engine,2023-11-29,Pending,Engine diagnostic tests pending,1500.00
+16,116,Fuel System,2023-11-30,Completed,Fuel system check and calibration,900.00
+17,117,Landing Gear,2023-12-01,Pending,Landing gear component replacement needed,850.00
+18,118,Avionics,2023-12-02,Completed,Avionics firmware update,1100.00
+19,119,Engine,2023-12-03,Pending,Engine performance re-evaluation,1550.00
+20,120,Hydraulics,2023-12-04,Completed,Hydraulic pressure test completed,600.00
+21,121,Engine,2023-12-05,Pending,Engine diagnostic review,1500.00
+22,122,Landing Gear,2023-12-06,Completed,Landing gear alignment checked,800.00
+23,123,Avionics,2023-12-07,Pending,Avionics check scheduled,1200.00
+24,124,Hydraulics,2023-12-08,Completed,Hydraulic system overhaul completed,500.00
+25,125,Engine,2023-12-09,Pending,Engine sensor recalibration,1500.00
+26,126,Fuel System,2023-12-10,Completed,Fuel system inspection,900.00
+27,127,Landing Gear,2023-12-11,Pending,Landing gear inspection scheduled,850.00
+28,128,Avionics,2023-12-12,Completed,Avionics system diagnostic,1100.00
+29,129,Engine,2023-12-13,Pending,Engine performance check pending,1550.00
+30,130,Hydraulics,2023-12-14,Completed,Hydraulic system repair completed,600.00
+31,131,Engine,2023-12-15,Pending,Engine overhaul scheduled,1500.00
+32,132,Landing Gear,2023-12-16,Completed,Landing gear replacement completed,800.00
+33,133,Avionics,2023-12-17,Pending,Avionics system maintenance pending,1200.00
+34,134,Hydraulics,2023-12-18,Completed,Hydraulic system check,500.00
+35,135,Engine,2023-12-19,Pending,Engine diagnostic tests pending,1500.00
+36,136,Fuel System,2023-12-20,Completed,Fuel system maintenance performed,900.00
+37,137,Landing Gear,2023-12-21,Pending,Landing gear inspection,850.00
+38,138,Avionics,2023-12-22,Completed,Avionics update,1100.00
+39,139,Engine,2023-12-23,Pending,Engine performance test pending,1550.00
+40,140,Hydraulics,2023-12-24,Completed,Hydraulic system maintenance done,600.00
+41,141,Engine,2023-12-25,Pending,Engine diagnostic pending,1500.00
+42,142,Landing Gear,2023-12-26,Completed,Landing gear check,800.00
+43,143,Avionics,2023-12-27,Pending,Avionics system review pending,1200.00
+44,144,Hydraulics,2023-12-28,Completed,Hydraulic system repair,500.00
+45,145,Engine,2023-12-29,Pending,Engine sensor diagnostics,1500.00
+46,146,Fuel System,2023-12-30,Completed,Fuel system calibration,900.00
+47,147,Landing Gear,2023-12-31,Pending,Landing gear adjustment needed,850.00
+48,148,Avionics,2024-01-01,Completed,Avionics system upgrade,1100.00
+49,149,Engine,2024-01-02,Pending,Engine overhaul review,1550.00
+50,150,Avionics,2024-01-03,Pending,Avionics system check pending,1200.00
