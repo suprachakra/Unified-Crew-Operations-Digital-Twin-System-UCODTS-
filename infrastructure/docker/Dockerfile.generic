@@ -1,19 +1,22 @@
-## Generic Dockerfile Template
-
+# Use an official Python runtime as a parent image
 FROM python:3.9-slim
 
-### Set working directory
+# Set environment variables to prevent Python from writing pyc files and buffer stdout/stderr
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+
+# Set working directory
 WORKDIR /app
 
-### Install dependencies
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+# Copy and install dependencies
+COPY requirements.txt /app/
+RUN pip install --upgrade pip && pip install -r requirements.txt
 
-### Copy application code
-COPY . .
+# Copy the entire project into the container
+COPY . /app/
 
-### Expose application port (adjust as needed)
+# Expose the application's port (adjust as necessary)
 EXPOSE 8000
 
-### Command to run the application (adjust if using different server/framework)
-CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]
+# Define default command to run the application
+CMD ["python", "app.py"]
