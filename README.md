@@ -28,142 +28,162 @@ UCODTS is built on a modular microservices architecture that integrates:
 
 ```mermaid
 flowchart TD
-    %% Main Project Node
-    subgraph MAIN[UCODTS<br><b>Unified Crew & Operations Digital Twin System</b>]
-        DOC[Documentation]
-        FE[Frontend<br>React/Next.js]
-        BE[Backend Microservices]
-        DML[Data & Machine Learning]
-        INF[Infrastructure<br>& DevOps]
-        QA[Quality Assurance]
-        UTIL[Utility Scripts]
-        FB[Feedback & Continuous Improvement]
-        RM[Risk Management<br>& Mitigations]
-        PS[Product Strategy<br>& Roadmap]
-        MVP[MVP]
-    end
-
-    %% Documentation Breakdown
-    subgraph DOC_SUB[Documentation]
-        DOC1[Strategy Docs<br>Vision, Market, OKRs, Roadmap, MVP, Risk, Marketing]
-        DOC2[Technical Docs<br>Architecture, Requirements, Integration, QA, API, UX, Change Log]
-    end
+ subgraph MAIN["UCODTS<br><b>Unified Crew &amp; Operations Digital Twin System</b>"]
+        DOC["Documentation"]
+        FE["Frontend<br>React/Next.js"]
+        BE["Backend Microservices"]
+        DML["Data & Machine Learning"]
+        INF["Infrastructure<br>&amp; DevOps"]
+        QA["Quality Assurance"]
+        UTIL["Utility Scripts"]
+        FB["Feedback & Continuous Improvement"]
+        RM["Risk Management<br>&amp; Mitigations"]
+        PS["Product Strategy<br>&amp; Roadmap"]
+        MVP["MVP"]
+  end
+ subgraph DOC_SUB["Documentation"]
+        DOC1["Strategy Docs<br>Vision, Market, OKRs, Roadmap, MVP, Risk, Marketing"]
+        DOC2["Technical Docs<br>Architecture, Requirements, Integration, QA, API, UX, Change Log"]
+  end
+ subgraph FE_SUB["Frontend"]
+        FE1["Public Assets"]
+        FE2["Components & Pages"]
+        FE3["Styles & Configurations"]
+  end
+ subgraph BE_SUB["Backend Microservices"]
+        BE1["Auth Service"]
+        BE2["Crew Service"]
+        BE3["Flight Service"]
+        BE4["Maintenance Service"]
+        BE5["Safety Service"]
+        BE6["Disruption Service"]
+        BE7["Common Utilities"]
+        BE8["Database<br>Migrations, ORM"]
+        BE9["Message Queue<br>Kafka"]
+  end
+ subgraph DML_SUB["Data & Machine Learning"]
+        DML1["Datasets<br>Raw &amp; Processed"]
+        DML2["Notebooks<br>EDA, Cleaning, Prototyping"]
+        DML3["Preprocessing Scripts"]
+        DML4["ML Pipeline<br>Training &amp; Inference"]
+        DML5["Trained Models<br>Binary Files"]
+  end
+ subgraph INF_SUB["Infrastructure & DevOps"]
+        INF1["Docker Configurations"]
+        INF2["Kubernetes Manifests"]
+        INF3["Terraform Scripts"]
+        INF4["Monitoring<br>Prometheus, Grafana"]
+        INF5["Logging<br>ELK Stack"]
+  end
+ subgraph QA_SUB["Quality Assurance"]
+        QA1["Automated Tests<br>Backend, Frontend, Data, Security"]
+  end
+ subgraph UTIL_SUB["Utility Scripts"]
+        UTIL1["Monitoring Setup"]
+        UTIL2["Data Migration"]
+        UTIL3["General Utilities"]
+  end
+ subgraph FB_SUB["Feedback & Continuous Improvement"]
+        FB1["User Feedback"]
+        FB2["Performance Metrics"]
+        FB3["Security Audits"]
+  end
+ subgraph RM_SUB["Risk Management & Mitigations"]
+        RM1["API Contracts & Integration Tests"]
+        RM2["Scalability Testing & Auto-scaling"]
+        RM3["Agile Practices & Documentation Audits"]
+        RM4["Clear Ownership & Governance"]
+        RM5["Automated CI/CD & Config Management"]
+        RM6["Centralized Dependency Management"]
+  end
+ subgraph PS_SUB["Product Strategy & Roadmap"]
+        PS1["Vision & Mission"]
+        PS2["Roadmap & Milestones"]
+        PS3["Market & User Insights"]
+  end
+ subgraph MVP_SUB["MVP"]
+        MVP1["Core Functionalities"]
+        MVP2["Pilot Deployment"]
+        MVP3["User Feedback & Iteration"]
+  end
     DOC --> DOC_SUB
-
-    %% Frontend Breakdown
-    subgraph FE_SUB[Frontend]
-        FE1[Public Assets]
-        FE2[Components & Pages]
-        FE3[Styles & Configurations]
-    end
     FE --> FE_SUB
-
-    %% Backend Breakdown
-    subgraph BE_SUB[Backend Microservices]
-        BE1[Auth Service]
-        BE2[Crew Service]
-        BE3[Flight Service]
-        BE4[Maintenance Service]
-        BE5[Safety Service]
-        BE6[Disruption Service]
-        BE7[Common Utilities]
-        BE8[Database<br>Migrations, ORM]
-        BE9[Message Queue<br>Kafka]
-    end
     BE --> BE_SUB
-
-    %% Data & ML Breakdown
-    subgraph DML_SUB[Data & Machine Learning]
-        DML1[Datasets<br>Raw & Processed]
-        DML2[Notebooks<br>EDA, Cleaning, Prototyping]
-        DML3[Preprocessing Scripts]
-        DML4[ML Pipeline<br>Training & Inference]
-        DML5[Trained Models<br>Binary Files]
-    end
     DML --> DML_SUB
-
-    %% Infrastructure Breakdown
-    subgraph INF_SUB[Infrastructure & DevOps]
-        INF1[Docker Configurations]
-        INF2[Kubernetes Manifests]
-        INF3[Terraform Scripts]
-        INF4[Monitoring<br>Prometheus, Grafana]
-        INF5[Logging<br>ELK Stack]
-    end
     INF --> INF_SUB
-
-    %% Quality Assurance Breakdown
-    subgraph QA_SUB[Quality Assurance]
-        QA1[Automated Tests<br>Backend, Frontend, Data, Security]
-    end
     QA --> QA_SUB
-
-    %% Utility Scripts Breakdown
-    subgraph UTIL_SUB[Utility Scripts]
-        UTIL1[Monitoring Setup]
-        UTIL2[Data Migration]
-        UTIL3[General Utilities]
-    end
     UTIL --> UTIL_SUB
-
-    %% Feedback & Continuous Improvement Breakdown
-    subgraph FB_SUB[Feedback & Continuous Improvement]
-        FB1[User Feedback]
-        FB2[Performance Metrics]
-        FB3[Security Audits]
-    end
     FB --> FB_SUB
-
-    %% Risk Management & Mitigations Breakdown
-    subgraph RM_SUB[Risk Management & Mitigations]
-        RM1[API Contracts & Integration Tests]
-        RM2[Scalability Testing & Auto-scaling]
-        RM3[Agile Practices & Documentation Audits]
-        RM4[Clear Ownership & Governance]
-        RM5[Automated CI/CD & Config Management]
-        RM6[Centralized Dependency Management]
-    end
     RM --> RM_SUB
-
-    %% Product Strategy & Roadmap Breakdown
-    subgraph PS_SUB[Product Strategy & Roadmap]
-        PS1[Vision & Mission]
-        PS2[Roadmap & Milestones]
-        PS3[Market & User Insights]
-    end
     PS --> PS_SUB
-
-    %% MVP Breakdown
-    subgraph MVP_SUB[MVP]
-        MVP1[Core Functionalities]
-        MVP2[Pilot Deployment]
-        MVP3[User Feedback & Iteration]
-    end
     MVP --> MVP_SUB
+    FE -- Consumes APIs --> BE
+    BE -- Stores Data in --> DML1
+    BE4 -- Feeds predictions to --> DML4
+    INF -- Orchestrates & Supports --> BE
+    INF -- Supports --> FE
+    QA -- Validates --> BE & FE & DML
+    FB -- Drives Improvements --> DOC_SUB & FE & BE & DML & INF
+    UTIL -- Automates Tasks for --> INF & DML
+    RM -- Mitigates Risks in --> DOC_SUB & FE & BE & DML & INF & QA & UTIL
+    PS -- Guides vision & roadmap for --> MVP
+    PS -- Informs --> DOC_SUB
 
-    %% Interdependencies & Feedback Loops
-    FE -- "Consumes APIs" --> BE
-    BE -- "Stores Data in" --> DML1
-    BE4 -- "Feeds predictions to" --> DML4
-    INF -- "Orchestrates & Supports" --> BE
-    INF -- "Supports" --> FE
-    QA -- "Validates" --> BE
-    QA -- "Validates" --> FE
-    QA -- "Validates" --> DML
-    FB -- "Drives Improvements" --> DOC_SUB
-    FB -- "Drives Improvements" --> FE
-    FB -- "Drives Improvements" --> BE
-    FB -- "Drives Improvements" --> DML
-    FB -- "Drives Improvements" --> INF
-    UTIL -- "Automates Tasks for" --> INF
-    UTIL -- "Automates Tasks for" --> DML
-    RM -- "Mitigates Risks in" --> DOC_SUB
-    RM -- "Mitigates Risks in" --> FE
-    RM -- "Mitigates Risks in" --> BE
-    RM -- "Mitigates Risks in" --> DML
-    RM -- "Mitigates Risks in" --> INF
-    RM -- "Mitigates Risks in" --> QA
-    RM -- "Mitigates Risks in" --> UTIL
-    PS -- "Guides vision & roadmap for" --> MVP
-    PS -- "Informs" --> DOC_SUB
+     FE:::DegasGreen
+     BE:::Rose
+     DML:::KlimtGold
+     UTIL:::Peach
+     RM:::Pine
+     FE1:::DegasGreen
+     FE2:::DegasGreen
+     FE3:::DegasGreen
+     BE1:::RenoirPink
+     BE1:::Rose
+     BE2:::Rose
+     BE3:::Rose
+     BE4:::Rose
+     BE5:::Rose
+     BE6:::Rose
+     BE7:::Rose
+     BE8:::Rose
+     BE9:::Rose
+     DML1:::KlimtGold
+     DML2:::KlimtGold
+     DML3:::KlimtGold
+     DML4:::KlimtGold
+     DML5:::KlimtGold
+     RM1:::MonetBlue
+     RM2:::MonetBlue
+     RM3:::MonetBlue
+     RM4:::MonetBlue
+     RM5:::MonetBlue
+     RM6:::MonetBlue
+    classDef PicassoBlue stroke-width:1px, stroke-dasharray:none, stroke:#5A84A2, fill:#CDE0F2, color:#2D4661  
+    classDef HokusaiWave stroke-width:1px, stroke-dasharray:none, stroke:#6188A9, fill:#D4E8F2, color:#2A425D
+    classDef Sky stroke-width:1px, stroke-dasharray:none, stroke:#374D7C, fill:#E2EBFF, color:#374D7C
+    classDef VanGoghYellow stroke-width:1px, stroke-dasharray:none, stroke:#E3B448, fill:#FDF6C9, color:#7D5A17
+    classDef TurnerMist stroke-width:1px, stroke-dasharray:none, stroke:#B8C4D1, fill:#EAF2F8, color:#4A5B6F
+    classDef MatisseLavender stroke-width:1px, stroke-dasharray:none, stroke:#B39DBC, fill:#ECE3F5, color:#4E3A5E
+    classDef CezannePeach stroke-width:1px, stroke-dasharray:none, stroke:#E2A07D, fill:#FBE7DA, color:#6D4532
+    classDef Aqua stroke-width:1px, stroke-dasharray:none, stroke:#46EDC8, fill:#DEFFF8, color:#378E7A
+    classDef Ash stroke-width:1px, stroke-dasharray:none, stroke:#999999, fill:#EEEEEE, color:#000000
+    classDef MonetBlue stroke-width:1px, stroke-dasharray:none, stroke:#87AFC7, fill:#D4EAF7, color:#30577B
+    classDef Pine stroke-width:1px, stroke-dasharray:none, stroke:#254336, fill:#27654A, color:#FFFFFF
+    classDef Peach stroke-width:1px, stroke-dasharray:none, stroke:#FBB35A, fill:#FFEFDB, color:#8F632D
+    classDef RenoirPink stroke-width:1px, stroke-dasharray:none, stroke:#E4A0A0, fill:#FBE5E5, color:#7D3E3E
+    classDef KlimtGold stroke-width:1px, stroke-dasharray:none, stroke:#D4A017, fill:#FBF2C1, color:#705A16
+    classDef Rose stroke-width:1px, stroke-dasharray:none, stroke:#FF5978, fill:#FFDFE5, color:#8E2236
+    classDef DegasGreen stroke-width:1px, stroke-dasharray:none, stroke:#A7C796, fill:#E6F4E2, color:#3E6A42
+    style DOC_SUB fill:transparent
+    style FE_SUB fill:transparent
+    style BE_SUB fill:transparent
+    style DML_SUB fill:transparent
+    style INF_SUB fill:transparent
+    style QA_SUB fill:transparent
+    style UTIL_SUB fill:transparent
+    style FB_SUB fill:transparent
+    style RM_SUB fill:transparent
+    style PS_SUB fill:transparent
+    style MVP_SUB fill:transparent
+    style MAIN fill:transparent
 ```
