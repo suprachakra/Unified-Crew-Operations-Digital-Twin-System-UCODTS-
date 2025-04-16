@@ -1,0 +1,12 @@
+{
+  "regions": {
+    "FAA": {
+      "max_duty_hours": 14,
+      "min_rest_hours": 10
+    },
+    "EASA": {
+      "max_duty_hours": 13,
+      "min_rest_hours": 11
+    }
+  }
+}
