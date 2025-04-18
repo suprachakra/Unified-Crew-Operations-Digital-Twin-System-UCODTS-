@@ -1,12 +1,17 @@
-# Regulatory Compliance Service
+## Regulatory Compliance Service
 
 This microservice validates crew schedules against multi-region regulatory requirements.
 It applies flight time limitations, rest period checks, and custom business rules.
 
-## Endpoints
+### Endpoints
 - **POST /api/v1/compliance/validate**: Validate a crew schedule.
 
-## Running Locally
+### Running Locally
 1. Install dependencies: `pip install -r requirements.txt`
 2. Start the service: `uvicorn src.app:app --reload`
 3. Alternatively, build the Docker image:
+
+docker build -t compliance-service . docker run -p 8000:8000 compliance-service
+
+### Testing
+Run tests with `pytest tests/`
