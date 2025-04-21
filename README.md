@@ -22,7 +22,7 @@ UCODTS aims to build a robust, scalable, and secure platform that:
 ## Architecture Overview
 UCODTS is built on a modular microservices architecture that integrates:
 - **Frontend:** A Next.js application providing an intuitive dashboard.
-- **Backend:** Multiple microservices for authentication, crew scheduling, flight tracking, maintenance, safety, and disruption management.
+- **Backend:** Multiple microservices for authentication, crew scheduling, flight tracking, maintenance, safety, sustainability and disruption management.
 - **Data & ML:** Data ingestion pipelines, preprocessing scripts, and machine learning pipelines that ensure high‑quality analytics and predictive modeling.
 - **Infrastructure:** Containerization (Docker), orchestration (Kubernetes), and cloud provisioning (Terraform) backed by robust monitoring (Prometheus, Grafana) and logging (ELK).
 
@@ -51,20 +51,21 @@ flowchart TD
         FE3["Styles & Configurations"]
   end
  subgraph BE_SUB["Backend Microservices"]
-        BE1["Auth Service"]
-        BE2["Crew Service"]
-        BE3["Flight Service"]
-        BE4["Maintenance Service"]
-        BE5["Safety Service"]
-        BE6["Disruption Service"]
-        BE7["Common Utilities"]
-        BE8["Database<br>Migrations, ORM"]
+        BE1["Auth<br> Service"]
+        BE2["Crew Management<br> Service"]
+        BE3["Flight<br> Service"]
+        BE4["Maintenance<br> Service"]
+        BE5["Safety<br>Service"]
+        BE6["Disruption<br>ervice"]
+        BE7["Common<br> Utilities"]
+        BE8["Database<br>Migrations, ORM, ,<br>Data Sync"]
         BE9["Message Queue<br>Kafka"]
+        BE10["Sustainability"]
   end
  subgraph DML_SUB["Data & Machine Learning"]
         DML1["Datasets<br>Raw &amp; Processed"]
         DML2["Notebooks<br>EDA, Cleaning, Prototyping"]
-        DML3["Preprocessing Scripts"]
+        DML3["Preprocessing<br> Scripts"]
         DML4["ML Pipeline<br>Training &amp; Inference"]
         DML5["Trained Models<br>Binary Files"]
   end
@@ -79,22 +80,22 @@ flowchart TD
         QA1["Automated Tests<br>Backend, Frontend, Data, Security"]
   end
  subgraph UTIL_SUB["Utility Scripts"]
-        UTIL1["Monitoring Setup"]
-        UTIL2["Data Migration"]
-        UTIL3["General Utilities"]
+        UTIL1["Monitoring<br> Setup"]
+        UTIL2["Data<br> Migration"]
+        UTIL3["General<br> Utilities"]
   end
  subgraph FB_SUB["Feedback & Continuous Improvement"]
-        FB1["User Feedback"]
-        FB2["Performance Metrics"]
-        FB3["Security Audits"]
+        FB1["User<br> Feedback"]
+        FB2["Performance<br> Metrics"]
+        FB3["Security<br> Audits"]
   end
- subgraph RM_SUB["Risk Management & Mitigations"]
-        RM1["API Contracts & Integration Tests"]
-        RM2["Scalability Testing & Auto-scaling"]
-        RM3["Agile Practices & Documentation Audits"]
-        RM4["Clear Ownership & Governance"]
-        RM5["Automated CI/CD & Config Management"]
-        RM6["Centralized Dependency Management"]
+ subgraph RM_SUB["Risk Management<br> &amp; Mitigations"]
+        RM1["API Contracts<br> &amp; Integration Tests"]
+        RM2["Scalability Testing<br> &amp; Auto-scaling"]
+        RM3["Agile Practices<br> &amp; Documentation Audits"]
+        RM4["Clear Ownership<br> &amp; Governance"]
+        RM5["Automated CI/CD<br> &amp; Config Management"]
+        RM6["Centralized Dependency<br> Management"]
   end
  subgraph PS_SUB["Product Strategy & Roadmap"]
         PS1["Vision & Mission"]
@@ -106,9 +107,20 @@ flowchart TD
         MVP2["Pilot Deployment"]
         MVP3["User Feedback & Iteration"]
   end
+ subgraph API["API Gateway & Security"]
+        GW["API Gateway<br>(WAF, Rate‑Limit)"]
+        ID["Identity &amp; Auth<br>(OAuth2 / JWT / SSO)"]
+        MESH["Service Mesh<br>(mTLS, Circuit Breakers)"]
+  end
+ subgraph OBS["Observability"]
+        MET["Metrics<br> (Prometheus)"]
+        LOG["Logs<br> (ELK / Fluentd)"]
+        TRACE["Tracing<br> (Jaeger)"]
+        ALERT["Alert Rules / SLOs"]
+  end
     DOC --> DOC_SUB
     FE --> FE_SUB
-    BE --> BE_SUB
+    BE --> BE_SUB & OBS
     DML --> DML_SUB
     INF --> INF_SUB
     QA --> QA_SUB
@@ -128,6 +140,7 @@ flowchart TD
     RM -- Mitigates Risks in --> DOC_SUB & FE & BE & DML & INF & QA & UTIL
     PS -- Guides vision & roadmap for --> MVP
     PS -- Informs --> DOC_SUB
+    API --> BE
 
      FE:::DegasGreen
      BE:::Rose
@@ -147,6 +160,7 @@ flowchart TD
      BE7:::Rose
      BE8:::Rose
      BE9:::Rose
+     BE10:::Rose
      DML1:::KlimtGold
      DML2:::KlimtGold
      DML3:::KlimtGold
@@ -158,6 +172,9 @@ flowchart TD
      RM4:::MonetBlue
      RM5:::MonetBlue
      RM6:::MonetBlue
+     PS1:::Aqua
+     PS2:::Aqua
+     PS3:::Aqua
     classDef PicassoBlue stroke-width:1px, stroke-dasharray:none, stroke:#5A84A2, fill:#CDE0F2, color:#2D4661  
     classDef HokusaiWave stroke-width:1px, stroke-dasharray:none, stroke:#6188A9, fill:#D4E8F2, color:#2A425D
     classDef Sky stroke-width:1px, stroke-dasharray:none, stroke:#374D7C, fill:#E2EBFF, color:#374D7C
@@ -165,15 +182,15 @@ flowchart TD
     classDef TurnerMist stroke-width:1px, stroke-dasharray:none, stroke:#B8C4D1, fill:#EAF2F8, color:#4A5B6F
     classDef MatisseLavender stroke-width:1px, stroke-dasharray:none, stroke:#B39DBC, fill:#ECE3F5, color:#4E3A5E
     classDef CezannePeach stroke-width:1px, stroke-dasharray:none, stroke:#E2A07D, fill:#FBE7DA, color:#6D4532
-    classDef Aqua stroke-width:1px, stroke-dasharray:none, stroke:#46EDC8, fill:#DEFFF8, color:#378E7A
     classDef Ash stroke-width:1px, stroke-dasharray:none, stroke:#999999, fill:#EEEEEE, color:#000000
     classDef MonetBlue stroke-width:1px, stroke-dasharray:none, stroke:#87AFC7, fill:#D4EAF7, color:#30577B
     classDef Pine stroke-width:1px, stroke-dasharray:none, stroke:#254336, fill:#27654A, color:#FFFFFF
     classDef Peach stroke-width:1px, stroke-dasharray:none, stroke:#FBB35A, fill:#FFEFDB, color:#8F632D
     classDef RenoirPink stroke-width:1px, stroke-dasharray:none, stroke:#E4A0A0, fill:#FBE5E5, color:#7D3E3E
     classDef KlimtGold stroke-width:1px, stroke-dasharray:none, stroke:#D4A017, fill:#FBF2C1, color:#705A16
-    classDef Rose stroke-width:1px, stroke-dasharray:none, stroke:#FF5978, fill:#FFDFE5, color:#8E2236
     classDef DegasGreen stroke-width:1px, stroke-dasharray:none, stroke:#A7C796, fill:#E6F4E2, color:#3E6A42
+    classDef Aqua stroke-width:1px, stroke-dasharray:none, stroke:#46EDC8, fill:#DEFFF8, color:#378E7A
+    classDef Rose stroke-width:1px, stroke-dasharray:none, stroke:#FF5978, fill:#FFDFE5, color:#8E2236
     style DOC_SUB fill:transparent
     style FE_SUB fill:transparent
     style BE_SUB fill:transparent
