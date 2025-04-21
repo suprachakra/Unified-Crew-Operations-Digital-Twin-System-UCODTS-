@@ -26,6 +26,44 @@ UCODTS is built on a modular microservices architecture that integrates:
 - **Data & ML:** Data ingestion pipelines, preprocessing scripts, and machine learning pipelines that ensure high‑quality analytics and predictive modeling.
 - **Infrastructure:** Containerization (Docker), orchestration (Kubernetes), and cloud provisioning (Terraform) backed by robust monitoring (Prometheus, Grafana) and logging (ELK).
 
+### Directory Snapshot
+```bash
+├── backend 
+│   ├──database/
+│   ├──message_queue/
+│   ├──services/
+│      ├──auth/
+│	     ├──common/
+│	     ├──compliance/
+│	     ├──crew-management/
+│	     ├──flight-tracking/
+│	     ├──maintenanace/
+│	     ├──safety/
+│	     ├──sustainability/
+├── data/
+├── docs/
+│   ├── Strategy/
+│   │   ├──Executive Summary and Vsion
+│	  │   ├──Market and User Insights
+│	  │   ├──OKRs
+│	  │   ├──Product Strategy
+│	  │   ├──Roadmap
+│  	│   ├──Launch Strategy 
+│   ├── Technical/
+│       ├──Architecture
+│	      ├──Epics and Strategic Alignement
+│	      ├──Requirements_FRs_NFRs
+│	      ├──AI Model
+│	      ├──Security_Devops_QA
+│	      ├──API Documentation
+├── frontend/                # Components, pages, Dasboards for Web portal & mobile app (React, React Native)
+├── infrastructure/          # Terraform, Kubernetes, Monitoring, CI/CD pipelines
+├── scripts/                 # Local setup, DB backups, testing, linting
+├── test/                    # Test Cases for BE, FE, Data and security
+
+```
+---
+
 ```mermaid
 flowchart TD
  subgraph MAIN["UCODTS<br><b>Unified Crew &amp; Operations Digital Twin System</b>"]
