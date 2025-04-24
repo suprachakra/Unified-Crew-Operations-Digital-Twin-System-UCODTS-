@@ -26,40 +26,43 @@ UCODTS is built on a modular microservices architecture that integrates:
 - **Data & ML:** Data ingestion pipelines, preprocessing scripts, and machine learning pipelines that ensure high‑quality analytics and predictive modeling.
 - **Infrastructure:** Containerization (Docker), orchestration (Kubernetes), and cloud provisioning (Terraform) backed by robust monitoring (Prometheus, Grafana) and logging (ELK).
 
+[Roadmap](https://github.com/suprachakra/Unified-Crew-Operations-Digital-Twin-System-UCODTS-/blob/main/docs/Strategy/05_Roadmap_and_Milestones.md#roadmap-and-milestones)
+
+
 ### Directory Snapshot
 ```bash
 ├── backend 
 │   ├──database/
 │   ├──message_queue/
 │   ├──services/
-│      ├──auth/
-│	     ├──common/
-│	     ├──compliance/
-│	     ├──crew-management/
-│	     ├──flight-tracking/
-│	     ├──maintenanace/
-│	     ├──safety/
-│	     ├──sustainability/
+│      ├──auth/                              # User authentication and authorization using JWT and OAuth standards
+│	     ├──common/                            # Shared utilities, configuration settings, and constants used across multiple backend services
+│	     ├──compliance/                        # Crew schedules against multi-region regulatory requirements(flight time limitations, rest period checks, and custom business rules)
+│	     ├──crew-management/                   # Fatigue mgmt, Crew scheduling
+│	     ├──flight-tracking/                   # Real-time flight position tracking, distress monitoring, and alert generation
+│	     ├──maintenanace/                      # Predictive maintenance
+│	     ├──safety/                            # Monitors safety incidents and manages incident reporting for regulatory compliance
+│	     ├──sustainability/                    # Tracks flight emissions and fuel efficiency metrics
 ├── data/
 ├── docs/
 │   ├── Strategy/
-│   │   ├──Executive Summary and Vsion
-│	  │   ├──Market and User Insights
-│	  │   ├──OKRs
-│	  │   ├──Product Strategy
-│	  │   ├──Roadmap
-│  	│   ├──Launch Strategy 
+│   │   ├──Executive Summary and Vsion       # Problem Statement, Vision, Mission, Strategic Imperatives
+│	  │   ├──Market and User Insights          # Market research, User personas, Competititve Analysis, Revenue Models
+│	  │   ├──OKRs                              # Strategic OKRs
+│	  │   ├──Product Strategy                  # Product Positioning, Value Proposition, Market positioning, GTM Strategy
+│	  │   ├──Roadmap                           # 18 month roadmap(Sprint Goals, Success Metric, SAFe milestones, Deliverables)
+│  	│   ├──Launch Strategy                   # MVP and full scale launches
 │   ├── Technical/
-│       ├──Architecture
-│	      ├──Epics and Strategic Alignement
-│	      ├──Requirements_FRs_NFRs
-│	      ├──AI Model
-│	      ├──Security_Devops_QA
-│	      ├──API Documentation
-├── frontend/                # Components, pages, Dasboards for Web portal & mobile app (React, React Native)
-├── infrastructure/          # Terraform, Kubernetes, Monitoring, CI/CD pipelines
-├── scripts/                 # Local setup, DB backups, testing, linting
-├── test/                    # Test Cases for BE, FE, Data and security
+│       ├──Architecture                      # Architectural componenets, Diagrams
+│	      ├──Epics and Strategic Alignement    # Epics and OKR alignemnts
+│	      ├──Requirements_FRs_NFRs             # Requirements, Acceptance critieria, Risks and Mitigations
+│	      ├──AI Model                          # Architecture, Training Data, MLOps Pipeline
+│	      ├──Security_Devops_QA                # Security Architecture, Disaster Recovery, CI/CD Pipepline, IaC, Testing Strategy
+│	      ├──API Documentation                 # Endpoints
+├── frontend/                                # Components, pages, Dasboards for Web portal & mobile app (React, React Native)
+├── infrastructure/                          # Terraform, Kubernetes, Monitoring, CI/CD pipelines
+├── scripts/                                 # Local setup, DB backups, testing, linting
+├── test/                                    # Test Cases for BE, FE, Data and security
 
 ```
 ---
@@ -185,6 +188,8 @@ flowchart TD
      DML:::KlimtGold
      UTIL:::Peach
      RM:::Pine
+     DOC1:::VanGoghYellow
+     DOC2:::VanGoghYellow
      FE1:::DegasGreen
      FE2:::DegasGreen
      FE3:::DegasGreen
@@ -204,6 +209,19 @@ flowchart TD
      DML3:::KlimtGold
      DML4:::KlimtGold
      DML5:::KlimtGold
+     INF1:::MatisseLavender
+     INF2:::MatisseLavender
+     INF3:::MatisseLavender
+     INF4:::MatisseLavender
+     INF5:::MatisseLavender
+     QA1:::CezannePeach
+     UTIL1:::DegasGreen
+     UTIL2:::DegasGreen
+     UTIL3:::HokusaiWave
+     UTIL3:::DegasGreen
+     FB1:::Peach
+     FB2:::Peach
+     FB3:::Peach
      RM1:::MonetBlue
      RM2:::MonetBlue
      RM3:::MonetBlue
@@ -213,25 +231,36 @@ flowchart TD
      PS1:::Aqua
      PS2:::Aqua
      PS3:::Aqua
+     MVP1:::Ash
+     MVP2:::Ash
+     MVP3:::Ash
+     GW:::RenoirPink
+     ID:::RenoirPink
+     MESH:::RenoirPink
+     MET:::TurnerMist
+     LOG:::TurnerMist
+     TRACE:::TurnerMist
+     ALERT:::TurnerMist
     classDef PicassoBlue stroke-width:1px, stroke-dasharray:none, stroke:#5A84A2, fill:#CDE0F2, color:#2D4661  
-    classDef HokusaiWave stroke-width:1px, stroke-dasharray:none, stroke:#6188A9, fill:#D4E8F2, color:#2A425D
     classDef Sky stroke-width:1px, stroke-dasharray:none, stroke:#374D7C, fill:#E2EBFF, color:#374D7C
-    classDef VanGoghYellow stroke-width:1px, stroke-dasharray:none, stroke:#E3B448, fill:#FDF6C9, color:#7D5A17
-    classDef TurnerMist stroke-width:1px, stroke-dasharray:none, stroke:#B8C4D1, fill:#EAF2F8, color:#4A5B6F
-    classDef MatisseLavender stroke-width:1px, stroke-dasharray:none, stroke:#B39DBC, fill:#ECE3F5, color:#4E3A5E
-    classDef CezannePeach stroke-width:1px, stroke-dasharray:none, stroke:#E2A07D, fill:#FBE7DA, color:#6D4532
-    classDef Ash stroke-width:1px, stroke-dasharray:none, stroke:#999999, fill:#EEEEEE, color:#000000
     classDef MonetBlue stroke-width:1px, stroke-dasharray:none, stroke:#87AFC7, fill:#D4EAF7, color:#30577B
     classDef Pine stroke-width:1px, stroke-dasharray:none, stroke:#254336, fill:#27654A, color:#FFFFFF
-    classDef Peach stroke-width:1px, stroke-dasharray:none, stroke:#FBB35A, fill:#FFEFDB, color:#8F632D
-    classDef RenoirPink stroke-width:1px, stroke-dasharray:none, stroke:#E4A0A0, fill:#FBE5E5, color:#7D3E3E
     classDef KlimtGold stroke-width:1px, stroke-dasharray:none, stroke:#D4A017, fill:#FBF2C1, color:#705A16
-    classDef DegasGreen stroke-width:1px, stroke-dasharray:none, stroke:#A7C796, fill:#E6F4E2, color:#3E6A42
     classDef Aqua stroke-width:1px, stroke-dasharray:none, stroke:#46EDC8, fill:#DEFFF8, color:#378E7A
     classDef Rose stroke-width:1px, stroke-dasharray:none, stroke:#FF5978, fill:#FFDFE5, color:#8E2236
+    classDef Peach stroke-width:1px, stroke-dasharray:none, stroke:#FBB35A, fill:#FFEFDB, color:#8F632D
+    classDef VanGoghYellow stroke-width:1px, stroke-dasharray:none, stroke:#E3B448, fill:#FDF6C9, color:#7D5A17
+    classDef HokusaiWave stroke-width:1px, stroke-dasharray:none, stroke:#6188A9, fill:#D4E8F2, color:#2A425D
+    classDef DegasGreen stroke-width:1px, stroke-dasharray:none, stroke:#A7C796, fill:#E6F4E2, color:#3E6A42
+    classDef MatisseLavender stroke-width:1px, stroke-dasharray:none, stroke:#B39DBC, fill:#ECE3F5, color:#4E3A5E
+    classDef RenoirPink stroke-width:1px, stroke-dasharray:none, stroke:#E4A0A0, fill:#FBE5E5, color:#7D3E3E
+    classDef TurnerMist stroke-width:1px, stroke-dasharray:none, stroke:#B8C4D1, fill:#EAF2F8, color:#4A5B6F
+    classDef Ash stroke-width:1px, stroke-dasharray:none, stroke:#999999, fill:#EEEEEE, color:#000000
+    classDef CezannePeach stroke-width:1px, stroke-dasharray:none, stroke:#E2A07D, fill:#FBE7DA, color:#6D4532
     style DOC_SUB fill:transparent
     style FE_SUB fill:transparent
     style BE_SUB fill:transparent
+    style OBS fill:transparent
     style DML_SUB fill:transparent
     style INF_SUB fill:transparent
     style QA_SUB fill:transparent
@@ -240,5 +269,6 @@ flowchart TD
     style RM_SUB fill:transparent
     style PS_SUB fill:transparent
     style MVP_SUB fill:transparent
+    style API fill:transparent
     style MAIN fill:transparent
 ```
