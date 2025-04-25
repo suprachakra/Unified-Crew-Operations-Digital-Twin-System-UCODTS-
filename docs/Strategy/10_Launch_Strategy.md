@@ -1,4 +1,4 @@
-## UCODTS Launch Strategy & Runbook
+## Launch Strategy & Runbook
 
 A complete, plug-and-play launch plan for the Unified Crew & Operations Digital Twin System—ready to copy-paste into GitHub.
 
