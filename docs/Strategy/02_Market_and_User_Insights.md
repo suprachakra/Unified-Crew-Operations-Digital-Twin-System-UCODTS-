@@ -46,6 +46,10 @@ In addition to the core roles, UCODTS is designed to serve a broad spectrum of u
 ### Current Landscape
 Airlines often rely on separate, specialized systems for each operational domain—crew management, flight operations, maintenance, and safety—leading to inefficiencies, redundant costs, and data silos.
 
+### Market Sizing  
+- **TAM**: \$1.2B global crew-management tools market (CAGR 6% ’24–’28)  
+- **SAM**: \$300M regional carriers in MENA & Europe  
+
 ### Market Gaps
 - **Fragmentation:** Most existing solutions fail to provide a holistic view, resulting in reactive decision-making and delayed responses.
   
