@@ -45,6 +45,11 @@ This document describes the complete CI/CD workflows, deployment strategies, and
 ### Rollback and Disaster Recovery
 - **Rollback Procedures:** Documented steps and automated triggers in CI/CD pipelines enable rapid rollback in case of deployment failures.
 - **Disaster Recovery:** Multi-region deployments, regular backups, and defined Recovery Time Objectives (RTO) and Recovery Point Objectives (RPO) ensure business continuity.
+- **Blue/Green Deploy**  
+  - Deploy v2 to green cluster  
+  - Run smoke tests  
+  - Switch traffic via ALB listener rule update  
+  - Rollback: revert ALB rule to blue  
 
 ### Deployment Workflow Summary
 1. **Commit & Build:** Code changes trigger the CI pipeline, which builds Docker images and runs tests.
