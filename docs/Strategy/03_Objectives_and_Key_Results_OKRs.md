@@ -1,9 +1,9 @@
-# Objectives and Key Results (OKRs)
+## Objectives and Key Results (OKRs)
 
-## Strategic OKRs
+### Strategic OKRs
 Our OKRs define the measurable goals that drive UCODTS’s impact. They are designed to ensure that every aspect of the platform contributes to enhanced operational efficiency, crew well-being, predictive maintenance accuracy, safety compliance, system scalability, and user experience.
 
-## Strategic Objectives
+### Strategic Objectives
 
 | OKR ID  | Objective                                                                 | Key Results                                                                                                                | Notes                                                  |
 |---------|---------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------|
@@ -14,12 +14,14 @@ Our OKRs define the measurable goals that drive UCODTS’s impact. They are desi
 | OKR-05  | Optimize Maintenance and Predictive Analytics                             | - Reduce maintenance downtime by **30%**<br>- Improve predictive model accuracy by **25%**<br>- Achieve a **95%** on-time detection rate for maintenance issues  | Implement real‑time monitoring and advanced predictive models.  |
 | OKR-06  | Enhance Security and Data Integrity                                       | - Achieve a **100% pass rate** on automated security scans<br>- Detect and remediate **zero critical vulnerabilities**<br>- Maintain full encryption for data in transit and at rest  | Continuous security audits and strict encryption protocols.  |
 
-## Implementation Plan
+*Linked Epics:* [docs/Technical/02_Epics_and_Strategic_Alignment.md](https://github.com/suprachakra/Unified-Crew-Operations-Digital-Twin-System-UCODTS-/blob/main/docs/Technical/02_Epics_and_Strategic_Alignment.md)
+
+### Implementation Plan
 - **Quarterly Reviews:** OKRs will be reviewed every quarter to assess progress and adjust strategies as needed.
 - **Cross‑Functional Alignment:** Regular meetings between Product, Engineering, Data, QA, and Security teams will ensure that each objective is met holistically.
 - **Continuous Monitoring:** Key performance metrics will be tracked in real-time through our integrated dashboards, ensuring timely intervention if targets are not met.
 
-## Ethical and Compliance Integration
+### Ethical and Compliance Integration
 - **Data Privacy & Security:**  
   Each OKR is achieved in full compliance with GDPR, IATA, and ISO 27001 standards.
 - **Transparency & Accountability:**  
