@@ -23,7 +23,7 @@ UCODTS aims to build a robust, scalable, and secure platform that:
 UCODTS is built on a modular microservices architecture that integrates:
 - **Frontend:** A Next.js application providing an intuitive dashboard.
 - **Backend:** Multiple microservices for authentication, crew scheduling, flight tracking, maintenance, safety, sustainability and disruption management.
-- **Data & ML:** Data ingestion pipelines, preprocessing scripts, and machine learning pipelines that ensure high‑quality analytics and predictive modeling.
+- **Data & ML:** Data ingestion pipelines, preprocessing scripts and machine learning pipelines that ensure high‑quality analytics and predictive modeling.
 - **Infrastructure:** Containerization (Docker), orchestration (Kubernetes), and cloud provisioning (Terraform) backed by robust monitoring (Prometheus, Grafana) and logging (ELK).
 
 [Roadmap](https://github.com/suprachakra/Unified-Crew-Operations-Digital-Twin-System-UCODTS-/blob/main/docs/Strategy/05_Roadmap_and_Milestones.md#roadmap-and-milestones)
