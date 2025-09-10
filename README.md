@@ -10,7 +10,7 @@ UCODTS aims to build a robust, scalable, and secure platform that:
 - Unifies fragmented operational data into a single source of truth
 - Leverages AI/ML and IoT to predict disruptions and optimize resource allocation
 - Empowers stakeholders with real‑time dashboards and actionable insights
-- Complies with the highest industry standards for safety, security, and regulatory compliance
+- Complies with the highest industry standards for safety, security and regulatory compliance
 
 ## Key Features
 - **Integrated Operations Dashboard:** Real‑time visualization of crew schedules, flight statuses, maintenance alerts, and safety incidents.
