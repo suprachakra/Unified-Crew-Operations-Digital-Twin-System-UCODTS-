@@ -13,7 +13,7 @@ UCODTS aims to build a robust, scalable, and secure platform that:
 - Complies with the highest industry standards for safety, security and regulatory compliance
 
 ## Key Features
-- **Integrated Operations Dashboard:** Real‑time visualization of crew schedules, flight statuses, maintenance alerts, and safety incidents.
+- **Integrated Operations Dashboard:** Real‑time visualization of crew schedules, flight statuses, maintenance alerts and safety incidents.
 - **Predictive Analytics:** Advanced AI/ML models to forecast crew fatigue, predict maintenance needs, and preemptively manage disruptions.
 - **Data Unification:** Aggregation of diverse data sources (IoT sensors, external APIs, legacy systems) into one cohesive system.
 - **Scalability & Resilience:** Cloud‑native microservices architecture orchestrated via Kubernetes and provisioned with Terraform.
